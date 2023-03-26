@@ -3,7 +3,6 @@ let curentTime = new Date();
 
 function formatDate (date) {
 let hours = curentTime.getHours();
-console.log(hours);
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day = days[curentTime.getDay()];
 let minutes = curentTime.getMinutes();
@@ -49,11 +48,9 @@ function currentWeather(response) {
   kindWeather.innerHTML = response.data.weather[0].main;
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
-  console.log(response.data)
   }
   
 function yourPosition(position) {
-  console.log(position);
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "c53c5911e4701f6cd25268968349210b";
