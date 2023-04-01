@@ -12,14 +12,14 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Home work 5</title>
+    <title>Home work 7</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-wrapper"><div class="weather-app">
         <form class="search-form" id="search-city">
           <div class="row">
-            <div class="col-6">
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Type a city and a country..."
@@ -36,15 +36,7 @@
                 class="form-control btn btn-primary shadow-sm"
               />
             </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
             </div>
-          </div>
         </form>
         <h1>Kyiv, Ukraine</h1>
         <ul>
@@ -52,14 +44,18 @@
           <li id="kind-weather">Partly Cloudy</li>
         </ul>
         <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <div class="float-left">
-                <span class="temperature" id="celcium">19</span>
-                <span class="units"><a href="#" id="newcelcium">°C </a></span>
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature">11</strong>
+                  <span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
               </div>
             </div>
-          </div>
           <div class="col-6">
             <ul>
               <li>Humidity:<span id="humidity"></span>%</li>
