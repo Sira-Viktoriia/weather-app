@@ -14,7 +14,6 @@ if (hours < 10 ) {
 }
   else {formattedDate.innerHTML = `${day} ${hours}:${minutes}`;
 }
-
  return formattedDate;
 } 
 formatDate(curentTime);
@@ -51,13 +50,13 @@ function displayForecast() {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "ad30e0b12d16dad2505cf33c74cf90b5";
-  let urlForecast = `https:api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&cnt={cnt}&appid=${apiKey}`;
+  let apiKey = "833c989aab2705bd7e3ae4adf671884c";
+  let urlForecast = `https:api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
   axios.get(urlForecast).then(displayForecast);
 }
 
 
-let apiKey = "ad30e0b12d16dad2505cf33c74cf90b5";
+let apiKey = "833c989aab2705bd7e3ae4adf671884c";
 
 function search(e) {
   e.preventDefault();
