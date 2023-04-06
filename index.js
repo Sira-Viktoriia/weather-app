@@ -48,21 +48,24 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+
+
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "833c989aab2705bd7e3ae4adf671884c";
-  let urlForecast = `https:api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+  let urlForecast = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
   axios.get(urlForecast).then(displayForecast);
 }
 
 
-let apiKey = "833c989aab2705bd7e3ae4adf671884c";
+
 
 function search(e) {
   e.preventDefault();
   let curentCity = document.querySelector("#form-control");
   const userSearch = curentCity.value;
- 
+ let apiKey = "833c989aab2705bd7e3ae4adf671884c";
   let urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&units=metric&appid=${apiKey}`;
 axios.get(urlWeather).then(currentWeather);
 
