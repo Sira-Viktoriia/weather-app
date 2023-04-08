@@ -1,8 +1,12 @@
 
 body {
   font-family: arial, sans-serif;
+  background-color:antiquewhite;
 }
-
+.weather-wrapper {
+  background-color: azure;
+  border-radius: 20px;
+}
 h1 {
   color: #7c7c7c;
   font-size: 24px;
